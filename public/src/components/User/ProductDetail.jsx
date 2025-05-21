@@ -45,7 +45,6 @@ function ProductDetail() {
         if (productId) {
             axios.post(getProductDetailsRoute, { productId })
                 .then(response => {
-                    console.log(response.data.product)
                     setProduct(response.data.product);
                 })
                 .catch(error => {
